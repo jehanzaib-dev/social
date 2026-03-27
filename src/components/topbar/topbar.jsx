@@ -1,11 +1,13 @@
 import './topbar.css';
-import SearchIcon from '@mui/icons-material/Search';
-import PersonIcon from '@mui/icons-material/Person';
-import ChatIcon from '@mui/icons-material/Chat';
-import NotificationsIcon from '@mui/icons-material/Notifications';
+import * as MuiIcons from "@mui/icons-material";
 
 
 export default function TopBar(){
+	const SearchIcon=MuiIcons.Search;
+	const PersonIcon=MuiIcons.Person;
+	const ChatIcon=MuiIcons.Chat;
+	const NotificationsIcon=MuiIcons.Notifications;
+
 
 	return(
 		<div className='topbarContainer'>
@@ -20,7 +22,7 @@ export default function TopBar(){
 		</div>
 		<div className="topbarRight">
 			<div className="topbarLinks">
-			<span className="topbarLink">Home Page</span>
+			<span className="topbarLink">HomePage</span>
 			<span className="topbarLink">TimeLine</span>
 		</div>
 			<div className="topbarIcons">
