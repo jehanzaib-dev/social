@@ -4,14 +4,22 @@ import * as MuiIcons from "@mui/icons-material";
 
 
 export default function SideBar(){
+	const FeedIcon=MuiIcons.RssFeed;
 	const ChatIcon=MuiIcons.Chat;
+	const VideoIcon=MuiIcons.PlayCircle;
+	const GroupIcon=MuiIcons.Group;
+	const BookmarkIcon=MuiIcons.Bookmark;
+	const QuestionIcon=MuiIcons.HelpOutline;
+	const JobIcon=MuiIcons.WorkOutline;
+	const EventIcon=MuiIcons.Event;
+	const CourseIcon=MuiIcons.School;
 
 return(
 <div className='sidebar'>
 	<div className="sidebarWrapper">
 		<ul className="sidebarList">
 			<li className="sidebarListItem">
-				<ChatIcon className="sidebarListItemIcon"/>
+				<FeedIcon className="sidebarListItemIcon"/>
 				<span className="sidebarListItemText">Feed
 				</span>
 			</li>
@@ -21,37 +29,37 @@ return(
 				</span>
 			</li>
 			<li className="sidebarListItem">
-				<ChatIcon className="sidebarListItemIcon"/>
+				<VideoIcon className="sidebarListItemIcon"/>
 				<span className="sidebarListItemText">Videos
 				</span>
 			</li>
 			<li className="sidebarListItem">
-				<ChatIcon className="sidebarListItemIcon"/>
+				<GroupIcon className="sidebarListItemIcon"/>
 				<span className="sidebarListItemText">Groups
 				</span>
 			</li>
 			<li className="sidebarListItem">
-				<ChatIcon className="sidebarListItemIcon"/>
+				<BookmarkIcon className="sidebarListItemIcon"/>
 				<span className="sidebarListItemText">Bookmarks
 				</span>
 			</li>
 			<li className="sidebarListItem">
-				<ChatIcon className="sidebarListItemIcon"/>
+				<QuestionIcon className="sidebarListItemIcon"/>
 				<span className="sidebarListItemText">Questions
 				</span>
 			</li>
 			<li className="sidebarListItem">
-				<ChatIcon className="sidebarListItemIcon"/>
+				<JobIcon className="sidebarListItemIcon"/>
 				<span className="sidebarListItemText">Jobs
 				</span>
 			</li>
 			<li className="sidebarListItem">
-				<ChatIcon className="sidebarListItemIcon"/>
+				<EventIcon className="sidebarListItemIcon"/>
 				<span className="sidebarListItemText">Events
 				</span>
 			</li>
 			<li className="sidebarListItem">
-				<ChatIcon className="sidebarListItemIcon"/>
+				<CourseIcon className="sidebarListItemIcon"/>
 				<span className="sidebarListItemText">Courses
 				</span>
 			</li>
