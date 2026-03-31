@@ -1,6 +1,9 @@
 
 import './sidebar.css';
 import * as MuiIcons from "@mui/icons-material";
+import {Users} from '../../dummyData.js';
+import Friends from '../friends/friends.jsx';
+
 
 
 export default function SideBar(){
@@ -68,38 +71,11 @@ return(
 		</button>
 		<hr className="sidebarHr"/>
 		<ul className="sidebarFriendList">
-			<li className="sidebarFriendListItem">
-			<img src="/assets/person/2.jpeg" alt="image" className="sidebarFriendListItemImage"/>
-			<span className="sidebarFriendListItemName">Jane Doe</span>
-			</li>
-			<li className="sidebarFriendListItem">
-			<img src="/assets/person/2.jpeg" alt="image" className="sidebarFriendListItemImage"/>
-			<span className="sidebarFriendListItemName">Jane Doe</span>
-			</li>
-			<li className="sidebarFriendListItem">
-			<img src="/assets/person/2.jpeg" alt="image" className="sidebarFriendListItemImage"/>
-			<span className="sidebarFriendListItemName">Jane Doe</span>
-			</li>
-			<li className="sidebarFriendListItem">
-			<img src="/assets/person/2.jpeg" alt="image" className="sidebarFriendListItemImage"/>
-			<span className="sidebarFriendListItemName">Jane Doe</span>
-			</li>
-			<li className="sidebarFriendListItem">
-			<img src="/assets/person/2.jpeg" alt="image" className="sidebarFriendListItemImage"/>
-			<span className="sidebarFriendListItemName">Jane Doe</span>
-			</li>
-			<li className="sidebarFriendListItem">
-			<img src="/assets/person/2.jpeg" alt="image" className="sidebarFriendListItemImage"/>
-			<span className="sidebarFriendListItemName">Jane Doe</span>
-			</li>
-			<li className="sidebarFriendListItem">
-			<img src="/assets/person/2.jpeg" alt="image" className="sidebarFriendListItemImage"/>
-			<span className="sidebarFriendListItemName">Jane Doe</span>
-			</li>
-			<li className="sidebarFriendListItem">
-			<img src="/assets/person/2.jpeg" alt="image" className="sidebarFriendListItemImage"/>
-			<span className="sidebarFriendListItemName">Jane Doe</span>
-			</li>
+			{
+				Users.map(u=>(
+					<Friends key={u.id} user={u}/>))
+			}
+			
 		</ul>
 	</div>
 </div>
