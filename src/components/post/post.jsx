@@ -1,7 +1,9 @@
 import './post.css';
 import * as MuiIcons from "@mui/icons-material";
+import {Users} from '../../dummyData.js';
 
-export default function Post(){
+
+export default function Post({post}){
 	const MoreVertIcon=MuiIcons.MoreVert;
 
 return(
@@ -9,9 +11,11 @@ return(
 		<div className="postWrapper">
 			<div className="postWrapperTop">
 				<div className="postWrapperTopLeft">
-				<img src="/assets/person/1.jpeg" alt="" className="postWrapperTopLeftImg"/>
-				<span className="postWrapperTopLeftText">Jane Doe</span>
-				<span className="postWrapperTopLeftDate">5 mins ago</span>
+				<img src={Users.filter((u)=>u.id===post.userId)[0].profilePicture} alt="" className="postWrapperTopLeftImg"/>
+				<span className="postWrapperTopLeftText">
+					{Users.filter((u)=>u.id===post.userId)[0].username}
+				</span>
+				<span className="postWrapperTopLeftDate">{post.date}</span>
 				</div>
 				<div className="postWrapperTopRight">
 					<MoreVertIcon className="postWrapperTopRightIcon"/>
@@ -19,20 +23,20 @@ return(
 			</div>
 			<div className="postWrapperCenter">
 			<span className="postWrapperCenterText">
-				hy this is my irst post
+				{post?.desc}
 			</span>
-			<img src="assets/post/1.jpeg" alt="" className="postWrapperCenterImg"/>
+			<img src={post.photo} alt="" className="postWrapperCenterImg"/>
 			</div>
 			<div className="postWrapperBottom">
 				<div className="postWrapperBottomLeft">
 					<img src="assets/like.png" alt="" className="likeIcon"/>
 					<img src="assets/heart.png" alt="" className="likeIcon"/>
 					<span className="postLikeCounter">
-						32 people liked it
+						{post.like} people liked it
 					</span>
 				</div>
 				<div className="postWrapperBottomRight">
-					<span className="postCommentText">9 comments</span>
+					<span className="postCommentText">{post.comment} comments</span>
 				</div>
 			</div>
 		</div>
