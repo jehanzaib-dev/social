@@ -5,12 +5,74 @@ import {Users} from '../../dummyData.js';
 
 
 
-export default function RightBar(){
+export default function RightBar({profile}){
 
-return(
-	<div className='rightBar'>
-		<div className="rightbarWrapper">
-			<div className="birthdayContainer">
+	const ProfileRightBar=()=>{
+		return(
+			<>
+			<h4 className="rightBarTitle">User Information
+			</h4>
+			<div className="rightBarDataCntnr">
+			<span className="rightBarDataKey">City:
+			</span>
+			<span className="rightBarDataValue">New York
+			</span>
+			</div>
+			<div className="rightBarDataCntnr">
+			<span className="rightBarDataKey">From:
+			</span>
+			<span className="rightBarDataValue">Madrid
+			</span>
+			</div>
+			<div className="rightBarDataCntnr">
+			<span className="rightBarDataKey">Relationship:
+			</span>
+			<span className="rightBarDataValue">Single
+			</span>
+			</div>
+			<h4>User Friends</h4>
+			<div className="userFollowings">
+			<div className="userFollowingItem">
+			<img src="assets/person/1.jpeg" alt="" className="userFollowingImg"/>
+			<span className="rightbarFollowingName">Jone Carter
+			</span>
+			</div>
+			<div className="userFollowingItem">
+			<img src="assets/person/2.jpeg" alt="" className="userFollowingImg"/>
+			<span className="rightbarFollowingName">Jone Carter
+			</span>
+			</div>
+			<div className="userFollowingItem">
+			<img src="assets/person/3.jpeg" alt="" className="userFollowingImg"/>
+			<span className="rightbarFollowingName">Jone Carter
+			</span>
+			</div>
+			<div className="userFollowingItem">
+			<img src="assets/person/4.jpeg" alt="" className="userFollowingImg"/>
+			<span className="rightbarFollowingName">Jone Carter
+			</span>
+			</div>
+			<div className="userFollowingItem">
+			<img src="assets/person/5.jpeg" alt="" className="userFollowingImg"/>
+			<span className="rightbarFollowingName">Jone Carter
+			</span>
+			</div>
+			<div className="userFollowingItem">
+			<img src="assets/person/6.jpeg" alt="" className="userFollowingImg"/>
+			<span className="rightbarFollowingName">Jone Carter
+			</span>
+			</div>
+
+			</div>
+
+
+			</>
+			)
+	}
+	const HomeRightBar=()=>{
+		return(
+		<>
+		<div className="birthdayContainer">
 				<img src="assets/gift.png" alt="" className="birthdayImg"/>
 				<span className="birthdayReminder"><b>Jacky Short </b>and <b>3 others</b> have birthday today.</span>
 				
@@ -24,6 +86,14 @@ return(
 			}				
 				
 			</ul>
+		</>
+		)
+	}
+
+return(
+	<div className='rightBar'>
+		<div className="rightbarWrapper">
+			<ProfileRightBar/>
 
 		</div>
 	

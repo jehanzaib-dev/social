@@ -29,7 +29,20 @@
 	padding: 0;
 	list-style: none;
 }
-
+.rightBarTitle{
+	font-size: 18px;
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+.rightBarDataCntnr{
+	margin-bottom: 10px;
+}
+.userFollowingImg{
+	width: 100px;
+	height: 100px;
+	border-radius: 5px;
+	object-fit: cover;
+}
 
 
 
