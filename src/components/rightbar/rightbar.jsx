@@ -30,34 +30,34 @@ export default function RightBar({profile}){
 			<span className="rightBarDataValue">Single
 			</span>
 			</div>
-			<h4>User Friends</h4>
-			<div className="userFollowings">
-			<div className="userFollowingItem">
+			<h4 className="userFriendsHeading">User Friends</h4>
+			<div className="userFollowingsCntnr">
+			<div className="userFollowingItemCntnr">
 			<img src="assets/person/1.jpeg" alt="" className="userFollowingImg"/>
 			<span className="rightbarFollowingName">Jone Carter
 			</span>
 			</div>
-			<div className="userFollowingItem">
+			<div className="userFollowingItemCntnr">
 			<img src="assets/person/2.jpeg" alt="" className="userFollowingImg"/>
 			<span className="rightbarFollowingName">Jone Carter
 			</span>
 			</div>
-			<div className="userFollowingItem">
+			<div className="userFollowingItemCntnr">
 			<img src="assets/person/3.jpeg" alt="" className="userFollowingImg"/>
 			<span className="rightbarFollowingName">Jone Carter
 			</span>
 			</div>
-			<div className="userFollowingItem">
+			<div className="userFollowingItemCntnr">
 			<img src="assets/person/4.jpeg" alt="" className="userFollowingImg"/>
 			<span className="rightbarFollowingName">Jone Carter
 			</span>
 			</div>
-			<div className="userFollowingItem">
+			<div className="userFollowingItemCntnr">
 			<img src="assets/person/5.jpeg" alt="" className="userFollowingImg"/>
 			<span className="rightbarFollowingName">Jone Carter
 			</span>
 			</div>
-			<div className="userFollowingItem">
+			<div className="userFollowingItemCntnr">
 			<img src="assets/person/6.jpeg" alt="" className="userFollowingImg"/>
 			<span className="rightbarFollowingName">Jone Carter
 			</span>
@@ -93,7 +93,7 @@ export default function RightBar({profile}){
 return(
 	<div className='rightBar'>
 		<div className="rightbarWrapper">
-			<ProfileRightBar/>
+			{profile ? <ProfileRightBar/>:<HomeRightBar/>}
 
 		</div>
 	
